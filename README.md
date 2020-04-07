@@ -1,6 +1,13 @@
 # dummy
 
-A new Flutter project.
+Dummy app for testing animations, images, audio..Etc.
+
+![](showcase/demo1.gif)
+
+
+
+
+![](name-of-giphy.gif)
 
 ## Getting Started
 
