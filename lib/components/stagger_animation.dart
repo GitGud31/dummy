@@ -70,7 +70,7 @@ class StaggerAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    timeDilation = 3;
+    timeDilation = 1;
     return AnimatedBuilder(
       builder: _buildAnimation,
       animation: controller,

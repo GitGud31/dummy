@@ -1,4 +1,5 @@
 import 'package:dummy/components/custom_animated_container.dart';
+import 'package:dummy/components/custom_tween_container.dart';
 import 'package:dummy/components/stagger_animation.dart';
 import 'package:dummy/custom/sine_curve.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class AnimationsScreen extends StatefulWidget {
 
 class _AnimationsScreenState extends State<AnimationsScreen>
     with SingleTickerProviderStateMixin {
-  Color _color = Colors.white;
+  Color _color;
   double _width = 60;
   double _height = 60;
   Curve _curve = Curves.linear;
@@ -57,9 +58,9 @@ class _AnimationsScreenState extends State<AnimationsScreen>
           backgroundColor: Colors.grey),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        child: ListView(
           children: <Widget>[
-            const Text('Animated Controller'),
+            Center(child: const Text('Animated Controller')),
             LimitedBox(
               maxHeight: 120,
               maxWidth: 120,
@@ -161,10 +162,17 @@ class _AnimationsScreenState extends State<AnimationsScreen>
                 ),
               ],
             ),
+            Divider(),
+            Center(child: const Text('Stagger Animation')),
             SizedBox(height: 5),
-            const Text('Animated Tween'),
-            SizedBox(height: 5),
-            StaggerDemo()
+            StaggerDemo(),
+            Divider(),
+            Center(child: const Text('Tween animation')),
+            Center(
+                child: Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: CustomTweenContainer(),
+            )),
           ],
         ),
       ),
