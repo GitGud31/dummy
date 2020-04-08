@@ -168,11 +168,15 @@ class _AnimationsScreenState extends State<AnimationsScreen>
             StaggerDemo(),
             Divider(),
             Center(child: const Text('Tween animation')),
-            Center(
-                child: Padding(
-              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-              child: CustomTweenContainer(),
-            )),
+            LimitedBox(
+              maxHeight: 60,
+              maxWidth: 60,
+              child: Center(
+                  child: Padding(
+                padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                child: CustomTweenContainer(),
+              )),
+            ),
           ],
         ),
       ),

@@ -37,7 +37,7 @@ class _CustomTweenContainerState extends State<CustomTweenContainer>
       },
       child: Container(
           width: 40,
-          height: 40,
+          height: 60,
           padding: const EdgeInsets.only(top: 10, bottom: 10),
           color: Colors.redAccent),
     );
